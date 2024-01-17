@@ -1,0 +1,27 @@
+* {
+  color: #bec3cc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #020000
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-list {
+  list-style-type: none;
+  margin: 15px 0px;
+}
+
+.header-list li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.themebutton {
+  margin: 15px 10px 0 10px;
+}
