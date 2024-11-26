@@ -147,7 +147,7 @@ header {
 }
 
 .sidebar {
-  background-color: #2dff116c;
+  background-color: var(--color-header);
   width: 47px;
   height: 100%;
 }
