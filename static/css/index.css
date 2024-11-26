@@ -1,7 +1,9 @@
 :root {
   --text-color-header: #B2B2B2;
-  --color-header: #242424;
+  --color-header: #181818;
   --text-color-header-hover: #2d2e2e;
+  --color-header-field: #242424;
+  --color-header-field-border: #454545;
 }
 
 @font-face {
@@ -23,8 +25,7 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  height: 25px;
-  padding: 8px 0 0 8px;
+  height: 34px;
   background-color: var(--color-header);
   user-select: none;
 }
@@ -32,6 +33,17 @@ header {
 .header-left, .header-center, .header-right {
   display: flex;
   height: 25px;
+}
+
+.header-left {
+  margin: 8px 0 0 8px;
+}
+
+.header-center {
+  position: absolute;
+  top: 0;
+  left: 37.5vw;
+  margin-top: 5px;
 }
 
 .header-icon {
@@ -51,8 +63,16 @@ header {
   user-select: none;
 }
 
-.header-text:hover {
+.header-text-hover:hover {
   border-radius: 5px;
   background-color: var(--text-color-header-hover);
   cursor: default;
+}
+
+.header-field {
+  width: 25vw;
+  text-align: center;
+  background-color: var(--color-header-field);
+  border: 1px solid var(--color-header-field-border);
+  border-radius: 5px;
 }
