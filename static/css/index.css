@@ -76,3 +76,12 @@ header {
   border: 1px solid var(--color-header-field-border);
   border-radius: 5px;
 }
+
+.header-field-icon {
+  color: var(--text-color-header);
+  font-size: 13px;
+}
+
+.header-field-text {
+  padding-left: 2px;
+}
