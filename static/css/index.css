@@ -12,6 +12,11 @@
   src: url("../fonts/Consolas.ttf");
 }
 
+@font-face {
+  font-family: Codicons;
+  src: url("../fonts/codicon.ttf");
+}
+
 * {
   color: #bec3cc;
   font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
@@ -21,6 +26,10 @@ body {
   background-image: url("../img/vscode.png");
   margin: 0;
   padding: 0;
+}
+
+.codicon {
+  font-family: Codicons !important;
 }
 
 header {
@@ -71,6 +80,9 @@ header {
 }
 
 .header-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 25vw;
   text-align: center;
   background-color: var(--color-header-field);
@@ -85,7 +97,8 @@ header {
 
 .header-field-icon {
   color: var(--text-color-header);
-  font-size: 13px;
+  font-size: 13px !important;
+  margin-right: 5px;
 }
 
 .header-field-text {
