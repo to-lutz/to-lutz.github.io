@@ -1,27 +1,55 @@
+:root {
+  --text-color-header: #B2B2B2;
+  --color-header: #242424;
+  --text-color-header-hover: #2d2e2e;
+}
+
+@font-face {
+  font-family: Consolas;
+  src: url("../fonts/Consolas.ttf");
+}
+
 * {
   color: #bec3cc;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #020000
+  background-image: url("../img/vscode.png");
+  margin: 0;
+  padding: 0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  height: 25px;
+  padding: 8px 0 0 8px;
+  background-color: var(--color-header);
 }
 
-.header-list {
-  list-style-type: none;
-  margin: 15px 0px;
+.header-left, .header-center, .header-right {
+  display: flex;
+  height: 25px;
 }
 
-.header-list li {
-  display: inline;
-  margin: 0 10px;
+.header-icon {
+  height: 18px;
+  width: 18px;
+  margin-right: 7.5px;
 }
 
-.themebutton {
-  margin: 15px 10px 0 10px;
+.header-text {
+  display: inline-block;
+  margin: -2px 0 0 0;
+  padding: 2px 7.5px 0 7.5px;
+  height: 21px;
+  font-size: 13px;
+  color: var(--text-color-header);
+}
+
+.header-text:hover {
+  border-radius: 5px;
+  background-color: var(--text-color-header-hover);
+  cursor: default;
 }
