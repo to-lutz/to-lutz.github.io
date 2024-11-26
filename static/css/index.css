@@ -159,13 +159,19 @@ header {
   align-items: center;
   width: 47px;
   height: 50px;
-  color: #fff;
+  color: var(--text-color-header);
   font-size: 24px !important;
+  cursor: pointer;
+}
+
+.sidebar-icon:hover {
+  color: #fff;
 }
 
 .sidebar-icon-selected {
   width: 45px;
   border-left: 2px solid var(--sidebar-selected-color);
+  color: #fff;
 }
 
 .primary-sidebar {
