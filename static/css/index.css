@@ -13,6 +13,7 @@
   --editor-background: #1f1f1f;
   --line-editor-color: #6e7681;
   --line-editor-selected-color: #cccccc;
+  --file-selected-color: #0078d4;
 }
 
 @font-face {
@@ -195,9 +196,33 @@ header {
 }
 
 .editor-file-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-color: #ffb4116c;
   width: 100%;
   height: 34px;
+}
+
+.editor-file {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 136px;
+  background-color: var(--color-background);
+  border-left: 1px solid var(--color-line-separator);
+  border-right: 1px solid var(--color-line-separator);
+  font-size: 14px;
+}
+
+.editor-file-selected {
+  height: calc(100% - 1px);
+  border-top: 1px solid var(--file-selected-color);
+}
+
+.editor-file:first-child {
+  border-left: none;
 }
 
 .editor-text {
