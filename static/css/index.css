@@ -1,6 +1,7 @@
 :root {
   --text-color-header: #B2B2B2;
   --color-header: #181818;
+  --color-background: #181818;
   --text-color-header-hover: #2d2e2e;
   --color-header-field: #242424;
   --color-header-field-hover: #2a2a2a;
@@ -147,7 +148,7 @@ header {
 }
 
 .sidebar {
-  background-color: var(--color-header);
+  background-color: var(--color-background);
   width: 47px;
   height: 100%;
 }
