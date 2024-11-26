@@ -28,8 +28,17 @@ body {
   padding: 0;
 }
 
-.codicon {
-  font-family: Codicons !important;
+.codicon[class*=codicon-] {
+  font: normal normal normal 16px/1 Codicons;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none
 }
 
 header {
@@ -103,4 +112,9 @@ header {
 
 .header-field-text {
   padding-left: 2px;
+}
+
+.header-layout-icon {
+  color: var(--text-color-header);
+  font-size: 13px !important;
 }
