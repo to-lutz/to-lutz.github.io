@@ -1,3 +1,4 @@
 {
-    "text": "<h1>Test3</h1>\n<div>\n<p>Hallo JAVASCRIPT</p>\n</div>"
+    "lang": "javascript",
+    "text": "function test(param){\n\tconsole.log('Log');\n}"
 }
