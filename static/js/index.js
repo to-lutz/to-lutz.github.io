@@ -93,6 +93,11 @@ function refreshFiles() {
     document.querySelectorAll('.editor-file').forEach(element => {
         if (element.dataset.id === curFileId) {
             element.classList.add('editor-file-selected');
+
+            fetch("./static/js/json/file" + curFileId + ".json").then((res) => res.json()).then((data) => {
+                textAreaElem.innerHTML = data.text;
+                setLines(data.text.split("\n").length);
+            });
         } else {
             element.classList.remove('editor-file-selected');
         }
