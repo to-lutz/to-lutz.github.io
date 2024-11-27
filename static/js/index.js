@@ -1,22 +1,23 @@
-import hljs from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/highlight.min.js';
+import hljs from './highlightjs/hljs.min.js';
 // import bash from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/bash.min.js';
 // import cpp from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/cpp.min.js';
 // import css from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/css.min.js';
 // import http from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/http.min.js';
 // import java from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/java.min.js';
-import javascript from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/javascript.min.js';
+import javascript from './highlightjs/javascript.js';
 // import json from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/json.min.js';
-// import markdown from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/markdown.min.js';
+import markdown from './highlightjs/markdown.js';
 // import php from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/php.min.js';
 // import powershell from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/powershell.min.js';
 // import python from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/python.min.js';
 // import shell from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/shell.min.js';
 // import sql from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/sql.min.js';
 // import vbscripthtml from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/vbscript-html.min.js';
-import xml from 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.10.0/build/es/languages/xml.min.js';
+import xml from './highlightjs/xml.js';
 
 hljs.registerLanguage('html', xml);
-hljs.registerLanguage('javascript', javascript)
+hljs.registerLanguage('javascript', javascript);
+hljs.registerLanguage('markdown', markdown)
 
 let currentLine = 1;
 let currentLineElem = document.querySelector(".editor-line-text-selected");
