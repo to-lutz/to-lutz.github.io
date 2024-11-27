@@ -56,6 +56,19 @@ function getTextAtLine(line) {
     return lines[line - 1];
 }
 
+function setLines(lineAmt) {
+    lineNumElem.innerHTML = "";
+    for (let i = 1; i <= lineAmt; i++) {
+        let lineNum = document.createElement("div");
+        lineNum.classList.add("editor-line-text");
+        lineNum.id = "lineNum" + i;
+        lineNum.innerHTML = i;
+        lineNumElem.appendChild(lineNum);
+    }
+    currentLine = lineAmt;
+    currentLineElem = lineNumElem.lastChild;
+}
+
 function refreshLineNumbers() {
     document.querySelectorAll(".editor-line-text").forEach((e, index) => {
         e.id = "lineNum" + (index + 1);
@@ -75,18 +88,6 @@ document.querySelectorAll(".editor-file").forEach(elem => elem.addEventListener(
     curFileId = elem.dataset.id;
     refreshFiles();
 }));
-
-function getUrlParameter(name) {
-    const params = new URLSearchParams(window.location.search);
-    return params.get(name);
-}
-
-const fileId = getUrlParameter('fileId');
-
-if (fileId) {
-    curFileId = fileId;
-    refreshFiles();
-}
 
 function refreshFiles() {
     document.querySelectorAll('.editor-file').forEach(element => {
