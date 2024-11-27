@@ -69,6 +69,13 @@ function refreshLineNumbers() {
     });
 }
 
+let curFileId = 1;
+
+document.querySelectorAll(".editor-file").forEach(elem => elem.addEventListener("click", (e) => {
+    curFileId = elem.dataset.id;
+    refreshFiles();
+}));
+
 function getUrlParameter(name) {
     const params = new URLSearchParams(window.location.search);
     return params.get(name);
@@ -77,8 +84,13 @@ function getUrlParameter(name) {
 const fileId = getUrlParameter('fileId');
 
 if (fileId) {
+    curFileId = fileId;
+    refreshFiles();
+}
+
+function refreshFiles() {
     document.querySelectorAll('.editor-file').forEach(element => {
-        if (element.dataset.id === fileId) {
+        if (element.dataset.id === curFileId) {
             element.classList.add('editor-file-selected');
         } else {
             element.classList.remove('editor-file-selected');
