@@ -9,7 +9,7 @@ textAreaElem.addEventListener("keypress", (e) => {
 
         let lineNum = document.createElement("div");
         lineNum.classList.add("editor-line-text");
-        lineNum.id = "lineNum" + (currentLine+1);
+        lineNum.id = "lineNum" + (currentLine + 1);
         lineNum.innerHTML = currentLine + 1;
         lineNumElem.appendChild(lineNum);
 
@@ -25,7 +25,7 @@ textAreaElem.addEventListener("keydown", (e) => {
     if (e.key === "Backspace") {
         if (getTextAtLine(currentLine) <= 1 && currentLine > 1) {
             document.querySelector("#lineNum" + currentLine).remove();
-            currentLineElem = document.querySelector("#lineNum" + (currentLine-1));
+            currentLineElem = document.querySelector("#lineNum" + (currentLine - 1));
             currentLine--;
 
             // Refresh all Line Numbers
@@ -58,13 +58,30 @@ function getTextAtLine(line) {
 
 function refreshLineNumbers() {
     document.querySelectorAll(".editor-line-text").forEach((e, index) => {
-        e.id = "lineNum" + (index+1);
-        e.innerHTML = (index+1);
+        e.id = "lineNum" + (index + 1);
+        e.innerHTML = (index + 1);
 
         if (index + 1 == currentLine) {
             e.classList.add("editor-line-text-selected");
         } else {
             e.classList.remove("editor-line-text-selected");
+        }
+    });
+}
+
+function getUrlParameter(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+}
+
+const fileId = getUrlParameter('fileId');
+
+if (fileId) {
+    document.querySelectorAll('.editor-file').forEach(element => {
+        if (element.dataset.id === fileId) {
+            element.classList.add('editor-file-selected');
+        } else {
+            element.classList.remove('editor-file-selected');
         }
     });
 }
