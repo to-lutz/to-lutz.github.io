@@ -166,10 +166,10 @@ header {
   display: flex !important;
   justify-content: center;
   align-items: center;
-  width: 47px;
-  height: 50px;
+  width: 58px;
+  height: 60px;
   color: var(--sidebar-unselected-icon);
-  font-size: 24px !important;
+  font-size: 34px !important;
   cursor: pointer;
 }
 
@@ -178,7 +178,7 @@ header {
 }
 
 .sidebar-icon-selected {
-  width: 45px;
+  width: 56px;
   border-left: 2px solid var(--sidebar-selected-color);
   color: var(--sidebar-selected-icon);
 }
