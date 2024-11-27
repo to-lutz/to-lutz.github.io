@@ -227,6 +227,10 @@ header {
   background-color: var(--file-hover-color);
 }
 
+.editor-file:hover > .file-close-icon {
+  visibility: visible;
+}
+
 .editor-file-selected {
   height: calc(100% - 1px);
   border-top: 1px solid var(--file-selected-color);
@@ -252,6 +256,7 @@ header {
 }
 
 .file-close-icon {
+  visibility: hidden;
   color: var(--file-close-color);
   margin-right: 10px;
   padding: 3px;
