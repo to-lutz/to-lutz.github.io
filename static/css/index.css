@@ -201,28 +201,29 @@ header {
 
 .primary-sidebar-explorer {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   color: var(--line-editor-selected-color);
   user-select: none;
 }
 
 .primary-sidebar-explorer-icon {
   color: var(--line-editor-selected-color);
+  font-size: 22px !important;
 }
 
 .primary-sidebar-folder {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: calc(100% - 2px - 2px); /* Padding Left Right */
+  width: calc(100% - 18px - 18px); /* Padding Left Right */
   height: 22px;
   background-color: var(--color-background);
-  padding: 0 2px;
+  padding: 0 18px;
 }
 
 .primary-sidebar-folder-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--editor-file-selected);
   user-select: none;
@@ -230,10 +231,10 @@ header {
 }
 
 .primary-sidebar-folder-items {
-  width: calc(100% - 2px - 2px);
+  width: calc(100% - 22px - 22px);
   height: calc(100% - 22px - 1px - 34px); /* Main Folder 22px Line 1px Explorer Title 34px */
   background-color: var(--color-background);
-  padding: 0 2px;
+  padding: 0 22px;
 }
 
 .primary-sidebar-subfolder {
@@ -248,7 +249,7 @@ header {
 
 .primary-sidebar-subfolder-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: 17px;
   color: var(--line-editor-selected-color);
   user-select: none;
   margin-left: 4px;
@@ -263,15 +264,19 @@ header {
 
 .primary-sidebar-file-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 12px;
+  font-size: 17px;
   color: var(--line-editor-selected-color);
   user-select: none;
   margin-left: 4px;
 }
 
+.primary-sidebar-folder-icon, .primary-sidebar-subfolder-icon {
+  font-size: 24px !important;
+}
+
 .primary-sidebar-file-icon {
-  width: 16px;
-  height: 16px;
+  width: 26px;
+  height: 26px;
 }
 
 .editor {
