@@ -232,7 +232,7 @@ header {
 
 .primary-sidebar-folder-items {
   width: calc(100% - 22px - 22px);
-  height: calc(100% - 22px - 1px - 34px); /* Main Folder 22px Line 1px Explorer Title 34px */
+  height: calc(100% - 22px - 1px - 51px); /* Main Folder 22px Line 1px Explorer Title 51px */
   background-color: var(--color-background);
   padding: 0 22px;
 }
