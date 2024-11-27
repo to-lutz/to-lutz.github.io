@@ -38,6 +38,7 @@ body {
   background-image: url("../img/vscode.png");
   margin: 0;
   padding: 0;
+  zoom: 110%;
 }
 
 .codicon[class*=codicon-] {
@@ -248,7 +249,7 @@ header {
 
 .primary-sidebar-subfolder-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--line-editor-selected-color);
   user-select: none;
   margin-left: 4px;
@@ -263,15 +264,15 @@ header {
 
 .primary-sidebar-file-title {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--line-editor-selected-color);
   user-select: none;
   margin-left: 4px;
 }
 
 .primary-sidebar-file-icon {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
 .editor {
