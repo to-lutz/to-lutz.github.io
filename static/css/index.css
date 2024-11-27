@@ -230,9 +230,6 @@ header {
 }
 
 .primary-sidebar-folder-items {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
   width: calc(100% - 2px - 2px);
   height: calc(100% - 22px - 1px - 34px); /* Main Folder 22px Line 1px Explorer Title 34px */
   background-color: var(--color-background);
@@ -255,6 +252,26 @@ header {
   color: var(--line-editor-selected-color);
   user-select: none;
   margin-left: 4px;
+}
+
+.primary-sidebar-folder-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.primary-sidebar-file-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  color: var(--line-editor-selected-color);
+  user-select: none;
+  margin-left: 4px;
+}
+
+.primary-sidebar-file-icon {
+  width: 16px;
+  height: 16px;
 }
 
 .editor {
