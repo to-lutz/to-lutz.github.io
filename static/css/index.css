@@ -53,6 +53,10 @@ body {
   -ms-user-select: none
 }
 
+img {
+  user-select: none !important;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -348,6 +352,7 @@ header {
   align-items: center;
   color: inherit;
   font-size: 15px;
+  user-select: none;
 }
 
 .file-close-icon {
