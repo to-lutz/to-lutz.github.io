@@ -238,6 +238,10 @@ header {
   color: var(--editor-file-selected);
 }
 
+.editor-file-selected > .file-close-icon {
+  visibility: visible !important;
+}
+
 .editor-file:first-child {
   border-left: none;
 }
