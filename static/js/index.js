@@ -25,6 +25,7 @@ let textAreaElem = document.querySelector(".editor-text-input");
 
 textAreaElem.addEventListener("keypress", (e) => {
     if (e.key == "Enter") {
+        if (!textAreaElem.contentEditable) return;
         currentLineElem.classList.remove("editor-line-text-selected");
 
         let lineNum = document.createElement("div");
@@ -43,6 +44,7 @@ textAreaElem.addEventListener("keypress", (e) => {
 
 textAreaElem.addEventListener("keydown", (e) => {
     if (e.key === "Backspace") {
+        if (!textAreaElem.contentEditable) return;
         if (getTextAtLine(currentLine) <= 1 && currentLine > 1) {
             document.querySelector("#lineNum" + currentLine).remove();
             currentLineElem = document.querySelector("#lineNum" + (currentLine - 1));
@@ -55,6 +57,7 @@ textAreaElem.addEventListener("keydown", (e) => {
 });
 
 textAreaElem.addEventListener("click", (e) => { // Click change cursor
+    if (!textAreaElem.contentEditable) return;
     currentLineElem.classList.remove("editor-line-text-selected");
 
     currentLine = getCurrentLineNumber();
@@ -116,6 +119,7 @@ function refreshFiles() {
 
             fetch("./static/js/json/file" + curFileId + ".json").then((res) => res.json()).then((data) => {
                 if (data.text.length > 0) {
+                    textAreaElem.contentEditable = "false";
                     textAreaElem.innerHTML = hljs.highlight(
                         data.text,
                         { language: data.lang }
