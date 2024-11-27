@@ -254,6 +254,13 @@ header {
 .file-close-icon {
   color: var(--file-close-color);
   margin-right: 10px;
+  padding: 3px;
+}
+
+.file-close-icon:hover {
+  border-radius: 5px;
+  background-color: var(--text-color-header-hover);
+  cursor: pointer;
 }
 
 .editor-text {
