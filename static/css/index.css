@@ -38,7 +38,6 @@ body {
   background-image: url("../img/vscode.png");
   margin: 0;
   padding: 0;
-  zoom: 110%;
 }
 
 .codicon[class*=codicon-] {
